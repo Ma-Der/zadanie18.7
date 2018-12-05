@@ -6,9 +6,9 @@ var ContactForm = React.createClass({
     return (
         <form className={'contactForm'}>
           <label for={'name'}>Imię: </label>
-          <input type={'text'} placeholder={'Imię'} value={this.props.contact.firstName}></input>
-          <input type={'text'} placeholder={'Nazwisko'} value={this.props.contact.lastName}></input>
-          <input type={'email'} placeholder={'email'} value={this.props.contact.email}></input>
+          <input type={'text'} placeholder={'Imię'} value={this.props.contact.firstName}>
+          <input type={'text'} placeholder={'Nazwisko'} value={this.props.contact.lastName}>
+          <input type={'email'} placeholder={'email'} value={this.props.contact.email}>
           <button type={submit}>Dodaj kontakt</button>
         </form>
 
