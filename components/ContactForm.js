@@ -14,5 +14,5 @@ ContactForm = React.createClass({
           <button type={'submit'}>Dodaj kontakt</button>
         </form>
       );
-  },
+  }
 });
