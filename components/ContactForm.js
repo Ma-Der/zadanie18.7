@@ -3,7 +3,7 @@ var ContactForm = React.createClass({
     contact: React.PropTypes.object.isRequired
   },
   render: function() {
-    return (
+    return 
         <form className={'contactForm'}>
           <label>Imię: </label>
           <input type={'text'} placeholder={'Imię'} value={this.props.contact.firstName}>
@@ -13,6 +13,6 @@ var ContactForm = React.createClass({
           <input type={'email'} placeholder={'email'} value={this.props.contact.email}>
           <button type={submit}>Dodaj kontakt</button>
         </form>
-    )
+
   },
-})
+});
