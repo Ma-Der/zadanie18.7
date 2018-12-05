@@ -1,3 +1,2 @@
-var app = <app></app>;
-
-document.getElementById('app').innerHTML = app;
+var app = React.createElement(App);
+ReactDOM.render(app, document.getElementById('app'));
