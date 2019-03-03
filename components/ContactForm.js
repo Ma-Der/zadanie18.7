@@ -16,13 +16,15 @@ ContactForm = React.createClass({
   },
 
   handleChange: function(e) {
-    this.setState({contactForm: e.target.value});
+    this.setState({
+      contactForm: e.target.value
+    });
   },
 
   handleSubmit: function(e) {
     e.preventDefault();
-    console.log(e);
-    this.props.contact.onContactAdd(e.target.value);
+    console.log(e.target.value);
+    this.props.onContactAdd;
   },
   render: function() {
     return (

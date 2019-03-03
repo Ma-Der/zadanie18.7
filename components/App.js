@@ -1,3 +1,4 @@
+import uuid from 'uuid';
 var contacts = [
   {
     id: 1,
@@ -53,6 +54,7 @@ App = React.createClass({
 },
 onContactAdd: function(name, surname, mail) {
   var contact = {
+    id: uuid.v4(),
     firstName: name,
     lastName: surname,
     email: mail
@@ -63,14 +65,9 @@ onContactAdd: function(name, surname, mail) {
   render: function() {
     return (
         <div className={'app'}>
-          <ContactForm contact={this.onContactAdd} />
+          <ContactForm onContactAdd={() => this.onContactAdd(this.state.contacts.firstName, this.state.contacts.lastName, this.state.contacts.email)} />
             <Contacts items={this.state.contacts} />
         </div>
-/*
-      React.createElement('div', {className: 'app'},
-        React.createElement(ContactForm, {contact: contactForm}),
-        React.createElement(Contacts, {items: contacts}, {})
-      ) */
     );
   }
 });
