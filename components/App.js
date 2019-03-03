@@ -1,4 +1,3 @@
-var uuid = require('uuid');
 
 App = React.createClass({
   getInitialState: function() {

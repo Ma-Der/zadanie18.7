@@ -12,7 +12,8 @@ ContactForm = React.createClass({
   },
 
   propTypes: {
-    contact: React.PropTypes.any.isRequired,
+    onContactAdd: React.PropTypes.any.isRequired,
+    contacts: React.PropTypes.any.isRequired,
   },
 
   handleChange: function(e) {
@@ -23,7 +24,7 @@ ContactForm = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
-    console.log(e.target.value);
+    console.log(e);
     this.props.onContactAdd;
   },
   render: function() {
