@@ -27,7 +27,6 @@ App = React.createClass({
 },
 onContactAdd: function(name, surname, mail) {
   var contact = {
-    id: uuid.v4(),
     firstName: name,
     lastName: surname,
     email: mail
