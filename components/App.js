@@ -26,9 +26,8 @@ var contactForm = {
 };
 
 App = React.createClass({
-  constructor() {
-    super();
-    this.state = {
+  getInitialState: function() {
+    return {
       contacts: [
       {
         id: 1,
@@ -50,12 +49,22 @@ App = React.createClass({
       }
     ]
   };
-}
+  this.onContactAdd = this.onContactAdd.bind(this);
+},
+onContactAdd: function(name, surname, mail) {
+  var contact = {
+    firstName: name,
+    lastName: surname,
+    email: mail
+  };
+  const data = [...this.state.contacts, contact];
+  this.setState({data});
+},
   render: function() {
     return (
         <div className={'app'}>
-          <ContactForm contact={contactForm} />
-            <Contacts items={contacts} />
+          <ContactForm contact={this.onContactAdd} />
+            <Contacts items={this.state.contacts} />
         </div>
 /*
       React.createElement('div', {className: 'app'},

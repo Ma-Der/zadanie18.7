@@ -1,6 +1,6 @@
 Contacts = React.createClass({
   propTypes: {
-    items: React.PropTypes.array.isRequired,
+    items: React.PropTypes.any.isRequired,
   },
 
   render: function() {
@@ -9,8 +9,7 @@ Contacts = React.createClass({
     });
 
     return (
-      <ul className={'contactsList'}>contacts</ul>
-
+      <ul className={'contactsList'}>{contacts}</ul>
     );
   }
 });
