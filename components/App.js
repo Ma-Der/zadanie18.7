@@ -1,4 +1,4 @@
-import uuid from 'uuid';
+var uuid = require('uuid');
 var contacts = [
   {
     id: 1,
