@@ -30,11 +30,11 @@ ContactForm = React.createClass({
     return (
         <form className={'contactForm'} onSubmit={this.handleSubmit}>
           <label>Imię: </label>
-          <input type={'text'} placeholder={'Imię'} onChange={this.handleChange} />
+          <input type={'text'} placeholder={'Imię'} value={this.props.contacts.firstName} onChange={this.handleChange} />
           <label>Nazwisko: </label>
-          <input type={'text'} placeholder={'Nazwisko'} onChange={this.handleChange}/>
+          <input type={'text'} placeholder={'Nazwisko'} value={this.props.contacts.lastName} onChange={this.handleChange}/>
           <label>Email: </label>
-          <input type={'email'} placeholder={'email'} onChange={this.handleChange}/>
+          <input type={'email'} placeholder={'email'} value={this.props.contacts.email} onChange={this.handleChange}/>
           <button type={'submit'}>Dodaj kontakt</button>
         </form>
       );

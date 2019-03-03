@@ -65,7 +65,7 @@ onContactAdd: function(name, surname, mail) {
   render: function() {
     return (
         <div className={'app'}>
-          <ContactForm onContactAdd={() => this.onContactAdd(this.state.contacts.firstName, this.state.contacts.lastName, this.state.contacts.email)} />
+          <ContactForm onContactAdd={() => this.onContactAdd(this.state.contacts.firstName, this.state.contacts.lastName, this.state.contacts.email)} contacts={this.state.contacts}/>
             <Contacts items={this.state.contacts} />
         </div>
     );
