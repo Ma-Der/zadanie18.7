@@ -1,16 +1,16 @@
 ContactForm = React.createClass({
   getInitialState: function(){
     return {
-          firstName: '',
-          lastName: '',
-          email: ''
+          firstName: ' ',
+          lastName: ' ',
+          email: ' '
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   },
 
   propTypes: {
-    onContactAdd: React.PropTypes.any.isRequired,
+    onContactAdd: React.PropTypes.func.isRequired,
     contacts: React.PropTypes.any.isRequired,
   },
 
@@ -45,6 +45,7 @@ ContactForm = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
+    console.log('this.state after update',this.state.firstName, this.state.lastName, this.state.email);
     this.props.onContactAdd(this.state.firstName, this.state.lastName, this.state.email);
     console.log(this.props.onContactAdd(this.state.firstName, this.state.lastName, this.state.email));
   },
