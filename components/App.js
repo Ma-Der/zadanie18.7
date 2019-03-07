@@ -1,4 +1,3 @@
-
 App = React.createClass({
   getInitialState: function() {
     return {
@@ -27,6 +26,7 @@ App = React.createClass({
 },
 onContactAdd: function(name, surname, mail) {
   var contact = {
+    id: Math.random(),
     firstName: name,
     lastName: surname,
     email: mail
