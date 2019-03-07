@@ -24,6 +24,7 @@ App = React.createClass({
   };
   this.onContactAdd = this.onContactAdd.bind(this);
 },
+
 onContactAdd: function(name, surname, mail) {
   var contact = {
     id: Math.random(),
@@ -32,6 +33,7 @@ onContactAdd: function(name, surname, mail) {
     email: mail
   };
   const data = [...this.state.contacts, contact];
+  console.log('data', data);
   this.setState({data});
 },
   render: function() {

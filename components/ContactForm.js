@@ -36,11 +36,6 @@ ContactForm = React.createClass({
       });
       console.log('email',this.state.email);
     }
-  /*  this.setState({
-          firstName: e.target.name,
-          lastName: e.target.name,
-          email: e.target.name
-    });*/
   },
 
   handleSubmit: function(e) {
