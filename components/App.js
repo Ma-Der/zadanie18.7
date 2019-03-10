@@ -34,7 +34,7 @@ onContactAdd: function(name, surname, mail) {
   };
   const data = [...this.state.contacts, contact];
   console.log('data', data);
-  this.setState({data});
+  return  this.setState({contacts: data});
 },
   render: function() {
     return (
